@@ -1,0 +1,36 @@
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin smallDevice {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+} 
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}	
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin at2x($path, $ext: "jpg", $w: auto, $h: auto) {
+  $at1x_path: "#{$path}.#{$ext}";
+  $at2x_path: "#{$path}@2x.#{$ext}";
+
+  background-image: url("#{$at1x_path}");
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5),
+         all and (-o-min-device-pixel-ratio: 3/2),
+         all and (min--moz-device-pixel-ratio: 1.5),
+         all and (min-device-pixel-ratio: 1.5) {
+           background-image: url("#{$at2x_path}");
+           background-size: $w $h;
+  }
+}
