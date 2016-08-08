@@ -174,6 +174,7 @@ body {
             -ms-transition: background-color 0.5s, box-shadow 0.3s;
             -o-transition: background-color 0.5s, box-shadow 0.3s;
             transition: background-color 0.5s, box-shadow 0.3s;
+            min-height: 361px;
 
             &:hover, &:focus, &:active {
                 background-color: #222;
@@ -314,4 +315,50 @@ section {
 }
 p {
     margin-bottom: 20px;
+}
+.app {
+    overflow: hidden;
+    .pageContainer {
+        display: block;
+        width: 200%;
+        clear: both;
+        margin-left: 0;
+        transition: margin-left 500ms;
+        .page {
+            display: block;
+            width: 50%;
+            float:left;
+            &:last-child {
+                clear: right;
+                opacity: 0;
+                transition: opacity 500ms;
+            }
+        }
+    }
+    .showProject {
+        margin-left: -100%;
+        .page:last-child {
+            opacity: 1;
+        }
+    }
+    .viewport {
+        display: block;
+        width: 100%;
+        height: 720px;
+        margin: 0 auto;
+        iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        &.mobile {
+
+        }
+        &.tablet {
+
+        }
+        &.desktop {
+
+        }
+    }
 }

@@ -1,16 +1,5 @@
-export const ActionTypes = {
-	REQUEST_PROJECTS: 'REQUEST_PROJECTS',
-	RECEIVE_PROJECTS_SUCCESS: 'RECEIVE_PROJECTS_SUCCESS',
-	RECEIVE_PROJECTS_FAILURE, 'RECEIVE_PROJECTS_FAILURE',
-	SELECT_PROJECT: 'SELECT_PROJECT',
-	SELECT_VIEWPORT: 'SELECT_VIEWPORT'
-};
-
-export const ViewportTypes = {
-	MOBILE: 'MOBILE',
-	TABLET: 'TABLET',
-	DESKTOP: 'DESKTOP'
-};
+import { ActionTypes } from './constants';
+import fetch from 'isomorphic-fetch';
 
 export function selectProject(id) {
 	return {
@@ -35,13 +24,25 @@ export function requestProjects() {
 export function receiveProjectsSuccess(projects) {
 	return {
 		type: ActionTypes.RECEIVE_PROJECTS_SUCCESS,
-		projects: projects
+		projects
 	};
 }
 
-export function receiveProjectsSuccess(error) {
+export function receiveProjectsFailure(error) {
 	return {
-		type: ActionTypes.RECEIVE_PROJECTS_SUCCESS,
-		error: error
+		type: ActionTypes.RECEIVE_PROJECTS_FAILURE,
+		error
+	};
+}
+
+// Async action
+export function fetchProjects() {
+
+	return dispatch => {
+		dispatch(requestProjects());
+		return fetch('/projects.json')
+			.then(response => response.json())
+			.then(json => dispatch(receiveProjectsSuccess(json)),
+				error => dispatch(receiveProjectsFailure(error)));
 	};
 }

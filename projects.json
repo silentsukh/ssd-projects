@@ -1,0 +1,66 @@
+[
+	{
+		"id":1,
+		"name": "Twatter",
+		"description": "Twitter clone using React.js and ES6",
+		"imageUrl": "http://durhailay.co/images/twatter_thumbnail.jpg",
+		"imageUrlx2": "http://durhailay.co/images/twatter_thumbnail@2x.jpg",
+		"url": "http://durhailay.co/twatter"
+	},
+	{
+		"id":2,
+		"name": "BuzzQuiz",
+		"description": "Multiple choice quiz using React.js",
+		"imageUrl": "http://durhailay.co/images/buzzquiz_thumbnail.jpg",
+		"imageUrlx2": "http://durhailay.co/images/buzzquiz_thumbnail@2x.jpg",
+		"url": "http://durhailay.co/buzzquiz"
+	},
+	{
+		"id":3,
+		"name": "ChatEx",
+		"description": "The answer to all your trading questions. A trading Q&A site that allows users to post charts and tips.",
+		"imageUrl": "http://durhailay.co/images/chatex_thumbnail.jpg",
+		"imageUrlx2": "http://durhailay.co/images/chatex_thumbnail@2x.jpg",
+		"url": "http://projectqanda.azurewebsites.net/"
+	},
+	{
+		"id":4,
+		"name": "Trade.Forex",
+		"description": "A website dedicated to forex trading featuring trade ideas, live prices, charts and client sentiment.",
+		"imageUrl": "http://durhailay.co/images/tf_thumbnail.jpg",
+		"imageUrlx2": "http://durhailay.co/images/tf_thumbnail@2x.jpg",
+		"url": "http://trade.forex/"
+	},
+	{
+		"id":5,
+		"name": "mySpotr",
+		"description": "Find your perfect fit. MySpotr matches users' goals with the right trainer and allows them to connect.",
+		"imageUrl": "http://durhailay.co/images/myspotr_thumbnail.jpg",
+		"imageUrlx2": "http://durhailay.co/images/myspotr_thumbnail@2x.jpg",
+		"url": "http://web.archive.org/web/20160305133135/http://myspotr.com/"
+	},
+	{
+		"id":6,
+		"name": "Reviews.Spreadbetting",
+		"description": "The answer to all your trading questions. A trading Q&A site that allows users to post charts and tips.",
+		"imageUrl": "http://durhailay.co/images/reviews_thumbnail.jpg",
+		"imageUrlx2": "http://durhailay.co/images/reviews_thumbnail@2x.jpg",
+		"url": "https://reviews.spreadbetting/"
+	},
+	{
+		"id":7,
+		"name": "News.Markets",
+		"description": "The answer to all your trading questions. A trading Q&A site that allows users to post charts and tips.",
+		"imageUrl": "http://durhailay.co/images/news_thumbnail.jpg",
+		"imageUrlx2": "http://durhailay.co/images/news_thumbnail@2x.jpg",
+		"url": "https://news.markets/"
+	},
+	{
+		"id":8,
+		"name": "Get.Forex",
+		"description": "The answer to all your trading questions. A trading Q&A site that allows users to post charts and tips.",
+		"imageUrl": "http://durhailay.co/images/getforex_thumbnail.jpg",
+		"imageUrlx2": "http://durhailay.co/images/getforex_thumbnail@2x.jpg",
+		"url": "http://get.forex/"
+	}
+]

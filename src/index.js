@@ -1,17 +1,28 @@
+import thunkMiddleware from 'redux-thunk';
+import createLogger from 'redux-logger';
+import { createStore, applyMiddleware } from 'redux';
+import { selectProject, selectViewport, fetchProjects } from './actions';
+import rootReducer from './reducers';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import AppContainer from './containers/AppContainer';
 
-class App extends React.Component {
-	render() {
-		return (
-			<header className="text-center">
-				<h1 className="brand">Project</h1>
-			</header>
-		);
-	}
-}
+const loggerMiddleware = createLogger();
+
+const store = createStore(
+	rootReducer,
+	applyMiddleware(
+		thunkMiddleware,
+		loggerMiddleware
+	)
+);
+
+
 
 ReactDOM.render(
-	<App />,
+	<Provider store={store}>
+		<AppContainer />
+	</Provider>,
 	document.getElementById('projectsComponent')
 );

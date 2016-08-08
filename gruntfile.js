@@ -7,9 +7,8 @@ module.exports = function(grunt) {
 					'dist/bundle.js': 'src/index.js'
 				},
 				options: {
-					transform: [ ['babelify', {presets: ['es2015', 'react']}] ],
-					plugins: [ 'babel-plugin-transform-object-rest-spread' ],
-					watch:true
+					transform: [ 'babelify' ],
+					watch: true
 				}
 			}
 		},
