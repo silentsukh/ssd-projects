@@ -22999,7 +22999,7 @@ function fetchProjects() {
 
 	return function (dispatch) {
 		dispatch(requestProjects());
-		return (0, _isomorphicFetch2.default)('/projects.json').then(function (response) {
+		return (0, _isomorphicFetch2.default)('projects.json').then(function (response) {
 			return response.json();
 		}).then(function (json) {
 			return dispatch(receiveProjectsSuccess(json));

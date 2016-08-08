@@ -40,7 +40,7 @@ export function fetchProjects() {
 
 	return dispatch => {
 		dispatch(requestProjects());
-		return fetch('/projects.json')
+		return fetch('projects.json')
 			.then(response => response.json())
 			.then(json => dispatch(receiveProjectsSuccess(json)),
 				error => dispatch(receiveProjectsFailure(error)));
